@@ -9,7 +9,7 @@ Reprezentacja liczby n odbywa się za pomocą funkcji f. Funkcja f wykonana n ra
 to funkcje wyrzszego rzędu, które jako argumenty przyjmują funkcje f oraz x:
 
 ```
-zero  :=  f(x) = x
+zero  :=  f(x) = x       -----------------------------------> lambda f: lambda x: x
 one   :=  f(x) = f(x)
 two   :=  f(x) = f(f(x))
 three :=  f(x) = f(f(f(x)))
