@@ -27,3 +27,6 @@ def mult(n,m):
 
 def exp(n,m):
 	return n(m)
+
+def church2int(n):
+	return n(lambda x:x+1)(0)
