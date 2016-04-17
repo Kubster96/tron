@@ -45,6 +45,7 @@ def church_to_int(n):
 
 #testowanie
 
+printAndEval('church_to_int(five)')
 printAndEval('church_to_int(succ(one))')
 printAndEval('church_to_int(mult(two, three))')
 printAndEval('church_to_int(add(one, four))')
