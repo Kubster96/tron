@@ -20,5 +20,5 @@ four  :=  f(x) = f(f(f(f(x))))
 .
 n     := f(x) = f^n(x)
 ```
-
+Operacje arytmetyczne mogą być reprezntowane przez funkcje na liczbach Churchach, możemy zdefiniować m.in. takie operacje jak następnik, dodawanie, mnożenie, poprzednik, odejmowanie, potęgowanie.
 
