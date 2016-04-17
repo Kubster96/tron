@@ -7,7 +7,7 @@ Jakub Jungiewicz
 function = lambda x: x+1
 
 """
-Liczebniki Churcha
+Liczebniki Churcha - 5 przykladowych, na nich bedziemy operowac
 """
 zero=lambda f: lambda x: x
 one=lambda f: lambda x: f(x)
