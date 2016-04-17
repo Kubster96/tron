@@ -1,5 +1,5 @@
-# Logika
+# Logika 1
 
-Projekty na zajęcia z Logiki Matematycznej w Informatyce
+Projekt na zajęcia z Logiki Matematycznej w Informatyce
 
 Jakub Jungiewicz
