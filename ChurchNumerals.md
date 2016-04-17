@@ -24,7 +24,7 @@ n     := f(x) = f^n(x)
 ```
 
 ### Operacje arytmetyczne
-Operacje arytmetyczne mogą być reprezntowane przez funkcje na liczbach Churchach, możemy zdefiniować m.in. takie operacje jak następnik, dodawanie, mnożenie, poprzednik, odejmowanie, potęgowanie.
+Operacje arytmetyczne mogą być reprezntowane przez funkcje na liczbach Churchach, możemy zdefiniować m.in. takie operacje jak następnik, dodawanie, mnożenie, potęgowanie.
 
 Następnik (inkrementacja) - Liczba n+1 może powstać poprzez wykonanie funkcji f o jeden raz więcej na liczbie n. Definiujemy ja jako następnik (succ).
 
@@ -47,9 +47,14 @@ Dodawanie - aby dodać do siebie dwie liczby m i n nalzey do liczby m zaaplikowa
 add   :=  m n f(x) = m f( n f(x)) ---------------> lambda m: lambda n: lambda f: lambda x: m(f)(n(f)(x))
 ```
 
-Mnożenie - mnozenie dwóch liczb m i n polega na wykonaniu funkcji m*n razy.
+Mnożenie - mnożenie dwóch liczb m i n polega na wykonaniu funkcji m*n razy.
 
 ```
 mult  := m n f(x) = m (n f)(x) ------------------> lambda m: lambda n: lambda f: lambda x: m(n(f))(x)
 ```
 
+Potęgowanie - jeżeli podnosimy liczbę m do potęgi n to wykonujemy funkcje f m^n razy.
+
+```
+exp   := m n f(x) = (n m)f(x) ------------------->  lambda m: lambda n: lambda f: lambda x: (n)(m)(f)(x)
+```
