@@ -9,7 +9,7 @@ F=(1 1 1 1 1 4 1)
 G=(4 4 3 1 4 0 2)
 
 MAINresults=(1 1 0 0 0 1 0)
-NEGresults=(0 0 1 0 0 0 1)
+NEGresults=(0 0 1 1 1 0 1)
 
 echo "MAIN"
 g++ -o main main.cpp
