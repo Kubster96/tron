@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 	f = atoi(argv[6]);
 	g = atoi(argv[7]);
 	
-	if((a<=0 and (b%c!=0 or c%d!=0)) and (e>=5 and ((f+g)>=4 or f!=4 or g!=4))) cout << 1 << endl;
+	if((a<=0 or (b%c!=0 and c%d!=0)) or (e>=5 or ((f+g)>=4 and f!=4 and g!=4))) cout << 1 << endl;
 	else cout << 0 << endl;
 	
 	return 0;
