@@ -1,30 +1,16 @@
-
+import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
 
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.DataLine;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.SourceDataLine;
-
-//klasa music sluzy do odtwarzania dzwieku metoda playSound przyjmuje argument w postaci sciezki do pliku po czym plik jest odtwarzany
 public class Music {
-
-    private final int BUFFER_SIZE = 128000;
+    private static final int BUFFER_SIZE = 128000;
     private File soundFile;
     private AudioInputStream audioStream;
-    private AudioFormat audioFormat;
     private SourceDataLine sourceLine;
 
-
-    public void playSound(String filename){
-
-        String strFilename = filename;
-
+    public void playSound(String filename) {
         try {
-            soundFile = new File(strFilename);
+            soundFile = new File(filename);
         } catch (Exception e) {
             e.printStackTrace();
             System.exit(1);
@@ -32,20 +18,17 @@ public class Music {
 
         try {
             audioStream = AudioSystem.getAudioInputStream(soundFile);
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             System.exit(1);
         }
 
-        audioFormat = audioStream.getFormat();
+        AudioFormat audioFormat = audioStream.getFormat();
 
         DataLine.Info info = new DataLine.Info(SourceDataLine.class, audioFormat);
         try {
             sourceLine = (SourceDataLine) AudioSystem.getLine(info);
             sourceLine.open(audioFormat);
-        } catch (LineUnavailableException e) {
-            e.printStackTrace();
-            System.exit(1);
         } catch (Exception e) {
             e.printStackTrace();
             System.exit(1);
@@ -62,13 +45,11 @@ public class Music {
                 e.printStackTrace();
             }
             if (nBytesRead >= 0) {
-                @SuppressWarnings("unused")
-                int nBytesWritten = sourceLine.write(abData, 0, nBytesRead);
+                sourceLine.write(abData, 0, nBytesRead);
             }
         }
 
         sourceLine.drain();
         sourceLine.close();
     }
-
 }

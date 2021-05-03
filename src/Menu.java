@@ -2,13 +2,10 @@ import javax.swing.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-//klasa Menu posiada Panel Przyciskow ktory jest wyswietlany na ekranie
 public class Menu extends JFrame {
-
     Buttons buttons;
 
-    public Menu(){
-
+    public Menu() {
         buttons = new Buttons(this);
         add(buttons);
 
@@ -20,15 +17,12 @@ public class Menu extends JFrame {
 
         setFocusable(true);
         addKeyListener(new KAdapter());
-
     }
 
     private class KAdapter extends KeyAdapter {
-
         @Override
         public void keyPressed(KeyEvent e) {
             buttons.board.keyPressed(e);
-
         }
     }
 }
