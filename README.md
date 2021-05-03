@@ -1,4 +1,4 @@
-# Java - Tron Game
+# Tron game
 Tron game in java (awt and swing)
 
-Projekt na zaliczenie z przedmiotu "Programowanie Obiektowe"
+Project for Object Oriented Programming
